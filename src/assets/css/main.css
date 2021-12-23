@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Todo counter*/
+.todoCounter {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0px 0px;
+}
+.todoCounter__title {
+  font-size: 3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.todoCounter__info {
+  font-size: 1.8rem;
+  line-height: 30px;
+}
+/*Todo search*/
+.todoSearch {
+  width: 100%;
+  padding: 20px 0px 40px;
+  display: flex;
+  justify-content: center;
+}
+.todoSearch__input {
+  width: 250px;
+  height: 35px;
+  padding: 5px 5px 5px 15px;
+  font-size: 1.4rem;
+  border: 1px solid #acacac;
+  border-radius: 7px;
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+/*Todo list*/
+.todoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+/*Todo item*/
+.todoItem {
+  width: 300px;
+  height: 100px;
+  border: 1px solid #acacac;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 15px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.todoItem__iconCheck {
+  background-image: url(../img/check.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.todoItem__text {
+  font-size: 1.6rem;
+}
+.todoItem__iconDelete {
+  background-image: url(../img/close.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+
+  position: absolute;
+  top: -12.5px;
+  left: calc(100% - 35px);
+  cursor: pointer;
+}
+/*Todo button*/
+.todoButton {
+  position: fixed;
+  top: calc(100% - 55px);
+  left: calc(100% - 55px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  background-color: rgba(0, 0, 255, 0.5);
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.todoButton__textAdd {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+/*Modal*/
+.modal {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 9px white, -2px -2px 9px white;
+}
+
+.modal__textArea {
+  outline: none;
+  border: 1px solid #acacac;
+  border-radius: 7px;
+  font-size: 1.4rem;
+  padding: 10px;
+  margin-bottom: 25px;
+  resize: none;
+}
+.modal__buttonsContainer {
+  display: flex;
+  gap: 15px;
+}
+.btn__modal {
+  width: 150px;
+  height: 35px;
+  border-radius: 7px;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.status {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.status__Text {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.--cancel {
+  background-color: rgb(255, 34, 34);
+}
+.--add {
+  background-color: rgb(27, 230, 27);
+}
+
+.--itemCompleted {
+  text-decoration: line-through;
+}
